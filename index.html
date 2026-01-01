@@ -1,23 +1,41 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en" class="dark scroll-smooth">
 
 <head>
   <meta charset="UTF-8" />
   <title>Abhimanyu Bhardwaj | DevOps Engineer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Portfolio of Abhimanyu Bhardwaj, a DevOps Engineer specializing in Cloud, Kubernetes, and Automation.">
 
+  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
   <script>
     tailwind.config = {
       darkMode: 'class',
       theme: {
         extend: {
           fontFamily: {
-            sans: ['Space Grotesk', 'sans-serif'],
+            sans: ['Outfit', 'sans-serif'],
+          },
+          colors: {
+            dark: {
+              bg: '#09090b', // Zinc 950
+              card: '#18181b', // Zinc 900
+              border: '#27272a', // Zinc 800
+            }
           },
           animation: {
-            'blob': 'blob 7s infinite',
+            'blob': 'blob 10s infinite',
             'float': 'float 6s ease-in-out infinite',
+            'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
           },
           keyframes: {
             blob: {
@@ -29,23 +47,21 @@
             float: {
               '0%, 100%': { transform: 'translateY(0)' },
               '50%': { transform: 'translateY(-20px)' },
+            },
+            fadeInUp: {
+              '0%': { opacity: '0', transform: 'translateY(20px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' },
             }
           }
         }
       }
     }
   </script>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600;700&display=swap"
-    rel="stylesheet">
 
   <style>
-    body {
-      transition: background-color 0.3s ease, color 0.3s ease;
-    }
-
     /* Custom Scrollbar */
     ::-webkit-scrollbar {
-      width: 10px;
+      width: 8px;
     }
 
     ::-webkit-scrollbar-track {
@@ -53,20 +69,16 @@
     }
 
     ::-webkit-scrollbar-thumb {
-      background: #94a3b8;
-      border-radius: 5px;
-    }
-
-    ::-webkit-scrollbar-thumb:hover {
-      background: #64748b;
+      background: #cbd5e1;
+      border-radius: 4px;
     }
 
     .dark ::-webkit-scrollbar-thumb {
-      background: #334155;
+      background: #3f3f46;
     }
 
     .dark ::-webkit-scrollbar-thumb:hover {
-      background: #475569;
+      background: #52525b;
     }
 
     /* Spotlights & Effects */
@@ -74,8 +86,8 @@
       position: fixed;
       inset: 0;
       pointer-events: none;
-      background: radial-gradient(circle at var(--x) var(--y), rgba(56, 189, 248, 0.15), transparent 40%);
-      z-index: -1;
+      background: radial-gradient(circle at var(--x) var(--y), rgba(14, 165, 233, 0.1), transparent 40%);
+      z-index: 0;
       opacity: 0;
       transition: opacity 0.5s ease;
     }
@@ -84,263 +96,380 @@
       opacity: 1;
     }
 
-    .cursor {
-      position: fixed;
-      width: 30px;
-      height: 30px;
-      border-radius: 50%;
-      pointer-events: none;
-      background: rgba(56, 189, 248, 0.5);
-      transform: translate(-50%, -50%);
-      z-index: 9999;
-      mix-blend-mode: screen;
-      filter: blur(5px);
-      transition: transform 0.1s ease;
-      display: none;
-      /* Hidden on touch/mobile by default */
+    /* Glass Utilities */
+    .glass {
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.5);
     }
 
-    @media (hover: hover) {
-      .cursor {
-        display: block;
-      }
+    .dark .glass {
+      background: rgba(24, 24, 27, 0.6);
+      border: 1px solid rgba(255, 255, 255, 0.05);
     }
 
     .glass-card {
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      transition: all 0.3s ease;
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(226, 232, 240, 0.8);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .dark .glass-card {
+      background: rgba(24, 24, 27, 0.5);
+      /* Zinc 900 / 0.5 */
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      box-shadow: 0 0 0 -1px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.1);
     }
 
     .glass-card:hover {
       transform: translateY(-5px);
+      border-color: rgba(14, 165, 233, 0.4);
+      /* Sky 500 */
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
     }
 
+    .dark .glass-card:hover {
+      background: rgba(39, 39, 42, 0.6);
+      border-color: rgba(56, 189, 248, 0.2);
+    }
+
+
     .gradient-text {
-      background: linear-gradient(90deg, #0ea5e9, #22c55e);
+      background: linear-gradient(135deg, #0284c7, #10b981);
+      /* Sky 600 to Emerald 500 */
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
     }
+
+    .dark .gradient-text {
+      background: linear-gradient(135deg, #38bdf8, #34d399);
+      /* Sky 400 to Emerald 400 */
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* Animation Classes */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s ease-out;
+    }
+
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
   </style>
 </head>
 
-<body class="bg-slate-50 text-slate-900 dark:bg-[#020617] dark:text-gray-200 selection:bg-sky-500/30">
-  <div class="cursor"></div>
+<body
+  class="bg-slate-50 text-slate-900 dark:bg-dark-bg dark:text-slate-200 selection:bg-sky-500/30 font-sans antialiased overflow-x-hidden">
+
   <div class="spotlight"></div>
 
-  <!-- Background Blobs for specific aesthetic -->
+  <!-- Background Blobs -->
   <div class="fixed inset-0 overflow-hidden pointer-events-none -z-10">
     <div
-      class="absolute top-0 left-1/4 w-96 h-96 bg-sky-200/40 dark:bg-sky-500/10 rounded-full mix-blend-multiply dark:mix-blend-screen filter blur-3xl opacity-70 animate-blob">
+      class="absolute top-[-10%] left-[-10%] w-[40rem] h-[40rem] bg-sky-400/20 dark:bg-sky-500/10 rounded-full mix-blend-multiply dark:mix-blend-screen filter blur-[100px] animate-blob">
     </div>
     <div
-      class="absolute top-0 right-1/4 w-96 h-96 bg-emerald-200/40 dark:bg-emerald-500/10 rounded-full mix-blend-multiply dark:mix-blend-screen filter blur-3xl opacity-70 animate-blob animation-delay-2000">
+      class="absolute top-[-10%] right-[-10%] w-[40rem] h-[40rem] bg-emerald-400/20 dark:bg-emerald-500/10 rounded-full mix-blend-multiply dark:mix-blend-screen filter blur-[100px] animate-blob animation-delay-2000">
     </div>
     <div
-      class="absolute -bottom-32 left-1/3 w-96 h-96 bg-pink-200/40 dark:bg-purple-500/10 rounded-full mix-blend-multiply dark:mix-blend-screen filter blur-3xl opacity-70 animate-blob animation-delay-4000">
+      class="absolute -bottom-32 left-[20%] w-[40rem] h-[40rem] bg-violet-400/20 dark:bg-violet-500/10 rounded-full mix-blend-multiply dark:mix-blend-screen filter blur-[100px] animate-blob animation-delay-4000">
     </div>
   </div>
 
-  <!-- THEME TOGGLE BUTTON -->
-  <button id="theme-toggle"
-    class="fixed top-6 right-6 z-50 p-3 rounded-full bg-white/80 dark:bg-slate-800/80 shadow-lg border border-slate-200 dark:border-slate-700 backdrop-blur-sm transition-all hover:scale-110 active:scale-95 text-slate-700 dark:text-yellow-400"
-    aria-label="Toggle Dark Mode">
-    <!-- Sun Icon -->
-    <svg id="sun-icon" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 hidden" fill="none" viewBox="0 0 24 24"
-      stroke="currentColor" stroke-width="2">
-      <path stroke-linecap="round" stroke-linejoin="round"
-        d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
-    </svg>
-    <!-- Moon Icon -->
-    <svg id="moon-icon" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 block text-slate-700" fill="none"
-      viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-      <path stroke-linecap="round" stroke-linejoin="round"
-        d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
-    </svg>
-  </button>
+  <!-- NAVIGATION -->
+  <nav
+    class="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-4xl rounded-full glass shadow-lg flex items-center justify-between px-6 py-3 transition-all duration-300">
+    <a href="#" class="text-xl font-bold tracking-tight hover:opacity-80 transition-opacity">
+      <span class="text-sky-600 dark:text-sky-400">Abhimanyu</span>
+    </a>
 
-  <!-- HERO -->
-  <section class="min-h-screen flex items-center justify-center text-center px-6 relative">
-    <div class="flex flex-col items-center animate-float">
-      <div class="relative group">
-        <div
-          class="absolute -inset-1 bg-gradient-to-r from-sky-400 to-emerald-400 rounded-full blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200">
-        </div>
-        <img src="assets/profile.jpg"
-          class="relative profile-pic w-48 h-48 object-cover rounded-full border-4 border-white dark:border-slate-800 shadow-2xl mb-8">
+
+    <div class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600 dark:text-slate-300">
+      <a href="#about" class="hover:text-sky-500 transition-colors">About</a>
+      <a href="#education" class="hover:text-sky-500 transition-colors">Education</a>
+      <a href="#skills" class="hover:text-sky-500 transition-colors">Skills</a>
+      <a href="#projects" class="hover:text-sky-500 transition-colors">Projects</a>
+    </div>
+
+    <!-- Theme Toggle -->
+    <button id="theme-toggle" class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+      aria-label="Toggle Theme">
+      <svg id="sun-icon" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 hidden text-yellow-500" fill="none"
+        viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round"
+          d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+      </svg>
+      <svg id="moon-icon" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-slate-600 dark:text-slate-300"
+        fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round"
+          d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+      </svg>
+    </button>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section class="min-h-screen flex items-center justify-center text-center px-6 relative pt-20">
+    <div class="flex flex-col items-center animate-fade-in-up max-w-4xl">
+
+      <!-- Status Badge -->
+      <div
+        class="mb-8 inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-100/50 dark:bg-emerald-900/30 border border-emerald-200 dark:border-emerald-800 text-emerald-700 dark:text-emerald-400 text-xs font-semibold uppercase tracking-wider">
+        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+        Open to Work
       </div>
 
-      <h1 class="text-6xl md:text-7xl font-bold gradient-text tracking-tight">Abhimanyu Bhardwaj</h1>
-      <p class="mt-6 text-xl text-slate-600 dark:text-slate-400 max-w-2xl">
-        DevOps Engineer • Cloud • Kubernetes • DevSecOps • Automation
+      <div class="relative group mb-8">
+        <div
+          class="absolute -inset-1 bg-gradient-to-r from-sky-400 to-emerald-400 rounded-full blur opacity-30 group-hover:opacity-60 transition duration-500">
+        </div>
+        <img src="assets/profile.jpg" alt="Abhimanyu Bhardwaj"
+          class="relative w-40 h-40 object-cover rounded-full border-2 border-white dark:border-dark-card shadow-2xl">
+      </div>
+
+      <h1 class="text-6xl md:text-8xl font-extrabold tracking-tight mb-6 text-slate-900 dark:text-white">
+        Hello, I'm <br />
+        <span class="gradient-text">Abhimanyu</span>
+      </h1>
+
+      <p class="text-xl md:text-2xl text-slate-600 dark:text-slate-400 max-w-2xl leading-relaxed mb-10">
+        <span class="font-semibold text-slate-800 dark:text-slate-200">DevOps Engineer</span> crafting scalable cloud
+        infrastructure, automating CI/CD pipelines, and securing varied environments.
       </p>
-      <div class="mt-10 flex gap-4 flex-wrap justify-center">
+
+      <div class="flex gap-4 flex-wrap justify-center">
         <a href="https://github.com/abhimanyu8829" target="_blank"
-          class="px-8 py-4 rounded-2xl bg-slate-900 text-white dark:bg-sky-500/10 dark:text-sky-400 border border-transparent dark:border-sky-500/50 hover:scale-105 transition-all shadow-lg hover:shadow-sky-500/25 font-semibold">
+          class="group px-8 py-3.5 rounded-full bg-slate-900 text-white dark:bg-white dark:text-slate-900 font-semibold hover:-translate-y-1 transition-all shadow-lg hover:shadow-xl flex items-center gap-2">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+            <path
+              d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+          </svg>
           GitHub
         </a>
         <a href="https://linkedin.com/in/abhimanyu-bhardwaj-a26640242" target="_blank"
-          class="px-8 py-4 rounded-2xl bg-emerald-600 text-white dark:bg-emerald-500/10 dark:text-emerald-400 border border-transparent dark:border-emerald-500/50 hover:scale-105 transition-all shadow-lg hover:shadow-emerald-500/25 font-semibold">
+          class="px-8 py-3.5 rounded-full bg-white text-slate-700 dark:bg-slate-800 dark:text-white border border-slate-200 dark:border-slate-700 font-semibold hover:-translate-y-1 transition-all shadow-sm hover:shadow-lg hover:border-blue-400 group flex items-center gap-2">
+          <svg class="w-5 h-5 text-[#0077b5]" fill="currentColor" viewBox="0 0 24 24">
+            <path
+              d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+          </svg>
           LinkedIn
         </a>
       </div>
+
     </div>
 
-    <!-- Scroll indicator -->
+    <!-- Scroll Indicator -->
     <div class="absolute bottom-10 animate-bounce">
-      <svg class="w-6 h-6 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-      </svg>
+      <a href="#about" class="text-slate-400 hover:text-sky-500 transition-colors">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+        </svg>
+      </a>
     </div>
   </section>
 
   <!-- ABOUT -->
-  <section class="max-w-6xl mx-auto px-6 py-20">
-    <div
-      class="glass-card p-10 rounded-3xl bg-white/50 dark:bg-white/5 border border-slate-200 dark:border-white/10 shadow-xl">
-      <h2 class="text-3xl font-bold mb-6 gradient-text">Professional Summary</h2>
-      <p class="text-slate-600 dark:text-slate-300 leading-relaxed text-lg">
-        DevOps Engineer with strong hands-on expertise in CI/CD automation, container orchestration,
+  <section id="about" class="max-w-5xl mx-auto px-6 py-24 reveal">
+    <div class="glass-card p-8 md:p-12 rounded-[2.5rem]">
+      <h2 class="text-xs font-bold uppercase tracking-widest text-sky-500 mb-4">About Me</h2>
+      <h3 class="text-3xl md:text-4xl font-bold mb-6 text-slate-800 dark:text-white">Professional Summary</h3>
+      <p class="text-lg text-slate-600 dark:text-slate-300 leading-relaxed">
+        I am a DevOps Engineer with strong hands-on expertise in <span
+          class="text-slate-900 dark:text-white font-semibold">CI/CD automation</span>, <span
+          class="text-slate-900 dark:text-white font-semibold">container orchestration</span>,
         cloud infrastructure, security-first DevOps (DevSecOps), and scalable system design.
-        Experienced in building production-like pipelines, automating testing infrastructure,
+        My focus is on building production-grade pipelines, automating testing infrastructure,
         and deploying fault-tolerant applications on Kubernetes.
       </p>
     </div>
   </section>
 
   <!-- EDUCATION -->
-  <section class="max-w-6xl mx-auto px-6 py-20">
-    <h2 class="text-4xl font-bold mb-10 text-slate-800 dark:text-white relative inline-block">
-      Education
-      <span class="absolute -bottom-2 left-0 w-1/3 h-1 bg-sky-500 rounded-full"></span>
-    </h2>
+  <section id="education" class="max-w-6xl mx-auto px-6 py-24 reveal">
+    <div class="flex items-center gap-4 mb-12">
+      <h2 class="text-3xl md:text-5xl font-bold text-slate-800 dark:text-white">Education</h2>
+      <div class="h-px flex-1 bg-gradient-to-r from-slate-200 to-transparent dark:from-slate-800"></div>
+    </div>
 
     <div class="grid md:grid-cols-2 gap-8">
       <!-- MCA -->
-      <div
-        class="glass-card p-8 rounded-3xl bg-white dark:bg-white/5 border border-slate-100 dark:border-white/10 shadow-lg dark:shadow-none hover:border-sky-500/30">
-        <div class="flex items-center justify-between mb-4">
-          <h3 class="text-2xl font-bold text-slate-800 dark:text-white">MCA</h3>
-          <span
-            class="px-3 py-1 rounded-full text-xs font-semibold bg-sky-100 text-sky-600 dark:bg-sky-500/20 dark:text-sky-300">Present</span>
+      <div class="glass-card p-10 rounded-[2rem] relative overflow-hidden group">
+        <div class="absolute top-0 right-0 p-5 opacity-10 group-hover:opacity-20 transition-opacity">
+          <svg class="w-24 h-24 text-sky-500" fill="currentColor" viewBox="0 0 24 24">
+            <path
+              d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zM3.72 9L12 4.49 20.28 9 12 13.51 3.72 9zm1.34 3.47L11 15.65v5.7l-5.94-3.25V12.47zM13 21.35v-5.7l5.94-3.18v5.63l-5.94 3.25z" />
+          </svg>
         </div>
-        <h4 class="text-lg font-medium text-slate-600 dark:text-slate-300 mb-2">Master of Computer Applications</h4>
-        <p class="text-slate-500 dark:text-slate-400 text-sm mb-4">2025 – Present</p>
-        <ul class="space-y-2 text-slate-600 dark:text-slate-300 text-sm">
-          <li class="flex items-start"><span class="mr-2 text-sky-500">▹</span>Advanced Software Engineering & System
-            Design</li>
-          <li class="flex items-start"><span class="mr-2 text-sky-500">▹</span>Cloud Computing, Distributed Systems</li>
-          <li class="flex items-start"><span class="mr-2 text-sky-500">▹</span>DevOps & Secure Deployment</li>
+
+        <div class="flex items-start justify-between mb-6">
+          <div>
+            <h3 class="text-2xl font-bold text-slate-800 dark:text-white mb-1">MCA</h3>
+            <p class="text-sky-600 dark:text-sky-400 font-medium">Master of Computer Applications</p>
+          </div>
+          <span
+            class="px-3 py-1 rounded-full text-xs font-semibold bg-sky-100 text-sky-700 dark:bg-sky-500/20 dark:text-sky-300 border border-sky-200 dark:border-sky-500/20">Present</span>
+        </div>
+
+        <p class="text-slate-500 dark:text-slate-500 text-sm mb-6 flex items-center gap-2">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+          </svg>
+          2025 – Present
+        </p>
+
+        <ul class="space-y-3 text-slate-600 dark:text-slate-300 text-sm">
+          <li class="flex items-start"><span class="mr-3 text-sky-500 font-bold">▹</span>Advanced Software Engineering &
+            System Design</li>
+          <li class="flex items-start"><span class="mr-3 text-sky-500 font-bold">▹</span>Cloud Computing & Distributed
+            Systems</li>
+          <li class="flex items-start"><span class="mr-3 text-sky-500 font-bold">▹</span>DevOps & Secure Deployment</li>
         </ul>
       </div>
 
       <!-- BCA -->
-      <div
-        class="glass-card p-8 rounded-3xl bg-white dark:bg-white/5 border border-slate-100 dark:border-white/10 shadow-lg dark:shadow-none hover:border-emerald-500/30">
-        <div class="flex items-center justify-between mb-4">
-          <h3 class="text-2xl font-bold text-slate-800 dark:text-white">BCA</h3>
-          <span
-            class="px-3 py-1 rounded-full text-xs font-semibold bg-emerald-100 text-emerald-600 dark:bg-emerald-500/20 dark:text-emerald-300">Completed</span>
+      <div class="glass-card p-10 rounded-[2rem] relative overflow-hidden group">
+        <div class="absolute top-0 right-0 p-5 opacity-10 group-hover:opacity-20 transition-opacity">
+          <svg class="w-24 h-24 text-emerald-500" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z" />
+          </svg>
         </div>
-        <h4 class="text-lg font-medium text-slate-600 dark:text-slate-300 mb-2">Bachelor of Computer Applications</h4>
-        <p class="text-slate-500 dark:text-slate-400 text-sm mb-4">2022 – 2025</p>
-        <ul class="space-y-2 text-slate-600 dark:text-slate-300 text-sm">
-          <li class="flex items-start"><span class="mr-2 text-emerald-500">▹</span>Operating Systems, Networks, DBMS
+
+        <div class="flex items-start justify-between mb-6">
+          <div>
+            <h3 class="text-2xl font-bold text-slate-800 dark:text-white mb-1">BCA</h3>
+            <p class="text-emerald-600 dark:text-emerald-400 font-medium">Bachelor of Computer Applications</p>
+          </div>
+          <span
+            class="px-3 py-1 rounded-full text-xs font-semibold bg-emerald-100 text-emerald-700 dark:bg-emerald-500/20 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-500/20">Completed</span>
+        </div>
+
+        <p class="text-slate-500 dark:text-slate-500 text-sm mb-6 flex items-center gap-2">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+          </svg>
+          2022 – 2025
+        </p>
+
+        <ul class="space-y-3 text-slate-600 dark:text-slate-300 text-sm">
+          <li class="flex items-start"><span class="mr-3 text-emerald-500 font-bold">▹</span>Operating Systems,
+            Networks, DBMS</li>
+          <li class="flex items-start"><span class="mr-3 text-emerald-500 font-bold">▹</span>Linux Internals & Cloud
+            Fundamentals</li>
+          <li class="flex items-start"><span class="mr-3 text-emerald-500 font-bold">▹</span>Hands-on DevOps Projects
           </li>
-          <li class="flex items-start"><span class="mr-2 text-emerald-500">▹</span>Linux Internals & Cloud Fundamentals
-          </li>
-          <li class="flex items-start"><span class="mr-2 text-emerald-500">▹</span>Hands-on DevOps Projects</li>
         </ul>
       </div>
-
     </div>
   </section>
 
 
   <!-- FULL SKILLS -->
-  <section class="max-w-6xl mx-auto px-6 py-20">
-    <h2 class="text-4xl font-bold mb-10 text-slate-800 dark:text-white relative inline-block">
-      Technical Expertise
-      <span class="absolute -bottom-2 left-0 w-1/3 h-1 bg-emerald-500 rounded-full"></span>
-    </h2>
+  <section id="skills" class="max-w-6xl mx-auto px-6 py-24 reveal">
+    <div class="flex items-center gap-4 mb-12">
+      <h2 class="text-3xl md:text-5xl font-bold text-slate-800 dark:text-white">Technical Arsenal</h2>
+      <div class="h-px flex-1 bg-gradient-to-r from-slate-200 to-transparent dark:from-slate-800"></div>
+    </div>
 
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
 
-      <div
-        class="glass-card p-6 bg-white dark:bg-white/5 border border-slate-100 dark:border-white/10 rounded-2xl shadow-md hover:shadow-xl dark:shadow-none transition-all group">
-        <h4 class="font-bold text-lg mb-3 text-slate-800 dark:text-sky-300 group-hover:text-sky-500 transition-colors">
-          CI/CD & Automation</h4>
+      <!-- CI/CD -->
+      <div class="glass-card p-8 rounded-2xl group">
+        <div
+          class="w-12 h-12 bg-blue-100 dark:bg-blue-500/10 rounded-xl flex items-center justify-center mb-6 text-blue-600 dark:text-blue-400 group-hover:scale-110 transition-transform">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15">
+            </path>
+          </svg>
+        </div>
+        <h4 class="font-bold text-lg mb-3 text-slate-800 dark:text-white">CI/CD & Automation</h4>
         <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
           Jenkins (Declarative & Scripted Pipelines), GitHub Actions, GitLab CI, Build Triggers, Artifact Management.
         </p>
       </div>
 
-      <div
-        class="glass-card p-6 bg-white dark:bg-white/5 border border-slate-100 dark:border-white/10 rounded-2xl shadow-md hover:shadow-xl dark:shadow-none transition-all group">
-        <h4 class="font-bold text-lg mb-3 text-slate-800 dark:text-sky-300 group-hover:text-sky-500 transition-colors">
-          Containers</h4>
+      <!-- Containers -->
+      <div class="glass-card p-8 rounded-2xl group">
+        <div
+          class="w-12 h-12 bg-sky-100 dark:bg-sky-500/10 rounded-xl flex items-center justify-center mb-6 text-sky-600 dark:text-sky-400 group-hover:scale-110 transition-transform">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10">
+            </path>
+          </svg>
+        </div>
+        <h4 class="font-bold text-lg mb-3 text-slate-800 dark:text-white">Containers & K8s</h4>
         <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
           Docker, Docker Compose, Kubernetes (K8s, K3s), Pod Lifecycle, Services, Ingress, ConfigMaps, Helm.
         </p>
       </div>
 
-      <div
-        class="glass-card p-6 bg-white dark:bg-white/5 border border-slate-100 dark:border-white/10 rounded-2xl shadow-md hover:shadow-xl dark:shadow-none transition-all group">
-        <h4 class="font-bold text-lg mb-3 text-slate-800 dark:text-sky-300 group-hover:text-sky-500 transition-colors">
-          Cloud Infrasctructure</h4>
+      <!-- Cloud -->
+      <div class="glass-card p-8 rounded-2xl group">
+        <div
+          class="w-12 h-12 bg-orange-100 dark:bg-orange-500/10 rounded-xl flex items-center justify-center mb-6 text-orange-600 dark:text-orange-400 group-hover:scale-110 transition-transform">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"></path>
+          </svg>
+        </div>
+        <h4 class="font-bold text-lg mb-3 text-slate-800 dark:text-white">Cloud Infrastructure</h4>
         <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
           AWS EC2, IAM, S3, VPC, Auto Scaling, Load Balancing, Cloud Security Fundamentals.
         </p>
       </div>
 
-      <div
-        class="glass-card p-6 bg-white dark:bg-white/5 border border-slate-100 dark:border-white/10 rounded-2xl shadow-md hover:shadow-xl dark:shadow-none transition-all group">
-        <h4
-          class="font-bold text-lg mb-3 text-slate-800 dark:text-emerald-300 group-hover:text-emerald-500 transition-colors">
-          DevSecOps</h4>
+      <!-- DevSecOps -->
+      <div class="glass-card p-8 rounded-2xl group">
+        <div
+          class="w-12 h-12 bg-red-100 dark:bg-red-500/10 rounded-xl flex items-center justify-center mb-6 text-red-600 dark:text-red-400 group-hover:scale-110 transition-transform">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z">
+            </path>
+          </svg>
+        </div>
+        <h4 class="font-bold text-lg mb-3 text-slate-800 dark:text-white">DevSecOps</h4>
         <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
           SonarQube (Quality Gates), Trivy, Secrets Management, mTLS, Zero-Trust Concepts.
         </p>
       </div>
 
-      <div
-        class="glass-card p-6 bg-white dark:bg-white/5 border border-slate-100 dark:border-white/10 rounded-2xl shadow-md hover:shadow-xl dark:shadow-none transition-all group">
-        <h4
-          class="font-bold text-lg mb-3 text-slate-800 dark:text-emerald-300 group-hover:text-emerald-500 transition-colors">
-          Testing & QA</h4>
+      <!-- QA -->
+      <div class="glass-card p-8 rounded-2xl group">
+        <div
+          class="w-12 h-12 bg-pink-100 dark:bg-pink-500/10 rounded-xl flex items-center justify-center mb-6 text-pink-600 dark:text-pink-400 group-hover:scale-110 transition-transform">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4">
+            </path>
+          </svg>
+        </div>
+        <h4 class="font-bold text-lg mb-3 text-slate-800 dark:text-white">Testing & QA</h4>
         <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
           Selenium Grid, Headless Chrome, Dynamic Test Pods, Automated Regression Workflows.
         </p>
       </div>
 
-      <div
-        class="glass-card p-6 bg-white dark:bg-white/5 border border-slate-100 dark:border-white/10 rounded-2xl shadow-md hover:shadow-xl dark:shadow-none transition-all group">
-        <h4
-          class="font-bold text-lg mb-3 text-slate-800 dark:text-emerald-300 group-hover:text-emerald-500 transition-colors">
-          Systems & Net</h4>
+      <!-- Reliability -->
+      <div class="glass-card p-8 rounded-2xl group">
+        <div
+          class="w-12 h-12 bg-purple-100 dark:bg-purple-500/10 rounded-xl flex items-center justify-center mb-6 text-purple-600 dark:text-purple-400 group-hover:scale-110 transition-transform">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+          </svg>
+        </div>
+        <h4 class="font-bold text-lg mb-3 text-slate-800 dark:text-white">Site Reliability</h4>
         <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
-          Linux (Ubuntu, RHEL), System Services, Logs, TCP/IP, DNS, Firewalls.
-        </p>
-      </div>
-
-      <div
-        class="glass-card p-6 bg-white dark:bg-white/5 border border-slate-100 dark:border-white/10 rounded-2xl shadow-md hover:shadow-xl dark:shadow-none transition-all group">
-        <h4
-          class="font-bold text-lg mb-3 text-slate-800 dark:text-pink-300 group-hover:text-pink-500 transition-colors">
-          Scripting</h4>
-        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
-          Bash Scripting, python, Node.js fundamentals, YAML, JSON.
-        </p>
-      </div>
-
-      <div
-        class="glass-card p-6 bg-white dark:bg-white/5 border border-slate-100 dark:border-white/10 rounded-2xl shadow-md hover:shadow-xl dark:shadow-none transition-all group">
-        <h4
-          class="font-bold text-lg mb-3 text-slate-800 dark:text-pink-300 group-hover:text-pink-500 transition-colors">
-          Reliability</h4>
-        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
-          Logging, Monitoring, Failure Recovery, High Availability Principles.
+          Logging, Monitoring, Failure Recovery, High Availability Principles, Scripting (Python, Bash).
         </p>
       </div>
 
@@ -348,80 +477,99 @@
   </section>
 
   <!-- PROJECTS -->
-  <section class="max-w-6xl mx-auto px-6 py-20">
-    <h2 class="text-4xl font-bold mb-10 text-slate-800 dark:text-white relative inline-block">
-      Key Projects
-      <span class="absolute -bottom-2 left-0 w-1/3 h-1 bg-purple-500 rounded-full"></span>
-    </h2>
+  <section id="projects" class="max-w-6xl mx-auto px-6 py-24 reveal">
+    <div class="flex items-center gap-4 mb-12">
+      <h2 class="text-3xl md:text-5xl font-bold text-slate-800 dark:text-white">Featured Projects</h2>
+      <div class="h-px flex-1 bg-gradient-to-r from-slate-200 to-transparent dark:from-slate-800"></div>
+    </div>
+
     <div class="grid md:grid-cols-2 gap-8">
 
+      <!-- Featured Project -->
       <div
-        class="glass-card p-8 bg-white dark:bg-white/5 border border-slate-100 dark:border-white/10 rounded-3xl shadow-lg dark:shadow-none group hover:scale-[1.02]">
-        <h3 class="text-2xl font-bold text-slate-800 dark:text-white group-hover:text-sky-500 transition-colors">
-          Blue-Green Deployment</h3>
-        <p class="text-slate-600 dark:text-slate-400 mt-4 leading-relaxed">
+        class="md:col-span-2 glass-card p-8 md:p-12 rounded-[2.5rem] relative overflow-hidden group border-sky-200/50 dark:border-sky-500/20">
+        <div
+          class="absolute top-0 right-0 bg-sky-500 text-white text-xs font-bold px-4 py-2 rounded-bl-2xl shadow-sm z-10">
+          FEATURED
+        </div>
+        <div
+          class="absolute inset-0 bg-gradient-to-r from-sky-50/50 to-transparent dark:from-sky-900/10 dark:to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+        </div>
+
+        <div class="relative z-10">
+          <h3 class="text-3xl font-bold text-slate-900 dark:text-white mb-4">🚀 End-to-End DevOps Platform</h3>
+          <p class="text-lg text-slate-700 dark:text-slate-300 mb-8 leading-relaxed max-w-3xl">
+            Designed and implemented an enterprise-style DevOps lifecycle covering CI/CD, Kubernetes deployment,
+            automated testing, DevSecOps integration, scalability configuration, and production reliability monitoring.
+          </p>
+          <div class="flex flex-wrap gap-2">
+            <span
+              class="px-3 py-1 rounded-full text-xs font-medium bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300">Full
+              Stack DevOps</span>
+            <span
+              class="px-3 py-1 rounded-full text-xs font-medium bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300">Kubernetes</span>
+            <span
+              class="px-3 py-1 rounded-full text-xs font-medium bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300">Monitoring</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 1 -->
+      <div class="glass-card p-10 rounded-[2rem] hover:border-blue-400/50 transition-colors">
+        <h3 class="text-2xl font-bold text-slate-800 dark:text-white mb-4">Blue-Green Deployment</h3>
+        <p class="text-slate-600 dark:text-slate-400 mb-6 leading-relaxed">
           Implemented zero-downtime deployment strategy using Kubernetes Services,
           traffic switching, and rollback mechanisms. Ensured high availability during updates.
         </p>
-        <div class="mt-4 flex gap-2">
+        <div class="flex gap-2">
           <span
-            class="text-xs px-2 py-1 rounded bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-300">K8s</span>
+            class="px-2 py-1 rounded text-xs bg-blue-100 text-blue-700 dark:bg-blue-500/20 dark:text-blue-300">K8s</span>
           <span
-            class="text-xs px-2 py-1 rounded bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-300">Docker</span>
+            class="px-2 py-1 rounded text-xs bg-blue-100 text-blue-700 dark:bg-blue-500/20 dark:text-blue-300">Docker</span>
         </div>
       </div>
 
-      <div
-        class="glass-card p-8 bg-white dark:bg-white/5 border border-slate-100 dark:border-white/10 rounded-3xl shadow-lg dark:shadow-none group hover:scale-[1.02]">
-        <h3 class="text-2xl font-bold text-slate-800 dark:text-white group-hover:text-emerald-500 transition-colors">
-          Dynamic Selenium Grid</h3>
-        <p class="text-slate-600 dark:text-slate-400 mt-4 leading-relaxed">
+      <!-- Project 2 -->
+      <div class="glass-card p-10 rounded-[2rem] hover:border-emerald-400/50 transition-colors">
+        <h3 class="text-2xl font-bold text-slate-800 dark:text-white mb-4">Dynamic Selenium Grid</h3>
+        <p class="text-slate-600 dark:text-slate-400 mb-6 leading-relaxed">
           Designed ephemeral Selenium Chrome pods triggered during CI pipelines
           to reduce infrastructure cost and execution time by 40%.
         </p>
-        <div class="mt-4 flex gap-2">
+        <div class="flex gap-2">
           <span
-            class="text-xs px-2 py-1 rounded bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-300">Selenium</span>
+            class="px-2 py-1 rounded text-xs bg-emerald-100 text-emerald-700 dark:bg-emerald-500/20 dark:text-emerald-300">Selenium</span>
           <span
-            class="text-xs px-2 py-1 rounded bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-300">CI/CD</span>
+            class="px-2 py-1 rounded text-xs bg-emerald-100 text-emerald-700 dark:bg-emerald-500/20 dark:text-emerald-300">Optimization</span>
         </div>
       </div>
 
-      <div
-        class="glass-card p-8 bg-white dark:bg-white/5 border border-slate-100 dark:border-white/10 rounded-3xl shadow-lg dark:shadow-none group hover:scale-[1.02]">
-        <h3 class="text-2xl font-bold text-slate-800 dark:text-white group-hover:text-purple-500 transition-colors">
-          DevSecOps Pipeline</h3>
-        <p class="text-slate-600 dark:text-slate-400 mt-4 leading-relaxed">
+      <!-- Project 3 -->
+      <div class="glass-card p-10 rounded-[2rem] hover:border-purple-400/50 transition-colors">
+        <h3 class="text-2xl font-bold text-slate-800 dark:text-white mb-4">DevSecOps Pipeline</h3>
+        <p class="text-slate-600 dark:text-slate-400 mb-6 leading-relaxed">
           Integrated code quality checks with SonarQube and vulnerability scanning with Trivy.
           Enforced security gates that block deployment on failure.
         </p>
-        <div class="mt-4 flex gap-2">
+        <div class="flex gap-2">
           <span
-            class="text-xs px-2 py-1 rounded bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-300">Security</span>
+            class="px-2 py-1 rounded text-xs bg-purple-100 text-purple-700 dark:bg-purple-500/20 dark:text-purple-300">Security</span>
           <span
-            class="text-xs px-2 py-1 rounded bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-300">Automation</span>
-        </div>
-      </div>
-
-      <div
-        class="glass-card relative p-8 bg-gradient-to-br from-sky-50 to-emerald-50 dark:from-sky-500/10 dark:to-emerald-500/10 border border-sky-200 dark:border-sky-400/30 rounded-3xl shadow-lg dark:shadow-none group hover:scale-[1.02] overflow-hidden">
-        <div class="absolute top-0 right-0 bg-sky-500 text-white text-xs font-bold px-3 py-1 rounded-bl-xl shadow-sm">
-          Featured</div>
-        <h3 class="text-2xl font-bold text-slate-900 dark:text-white">🚀 End-to-End DevOps Platform</h3>
-        <p class="text-slate-700 dark:text-slate-300 mt-4 leading-relaxed">
-          Enterprise-style DevOps lifecycle covering CI/CD, Kubernetes deployment,
-          automated testing, DevSecOps, scalability, and production reliability.
-        </p>
-        <div class="mt-4 flex gap-2">
-          <span class="text-xs px-2 py-1 rounded bg-white/50 dark:bg-white/10 text-slate-800 dark:text-slate-200">Full
-            Stack DevOps</span>
+            class="px-2 py-1 rounded text-xs bg-purple-100 text-purple-700 dark:bg-purple-500/20 dark:text-purple-300">Automation</span>
         </div>
       </div>
 
     </div>
   </section>
 
-  <footer class="text-center py-12 text-slate-500 dark:text-gray-500 text-sm">
+  <footer
+    class="py-12 text-center text-slate-500 dark:text-slate-500 text-sm glass border-t border-slate-200 dark:border-slate-800 bg-white/50 dark:bg-black/20">
+    <div class="mb-4 flex justify-center gap-6">
+      <a href="https://github.com/abhimanyu8829"
+        class="hover:text-slate-900 dark:hover:text-white transition-colors">GitHub</a>
+      <a href="https://linkedin.com/in/abhimanyu-bhardwaj-a26640242"
+        class="hover:text-slate-900 dark:hover:text-white transition-colors">LinkedIn</a>
+    </div>
     <p>© 2025 Abhimanyu Bhardwaj</p>
   </footer>
 
@@ -445,7 +593,6 @@
       html.classList.remove('dark');
       sunIcon.classList.add('hidden');
       moonIcon.classList.remove('hidden');
-      toggleBtn.classList.add('text-slate-700');
     }
 
     // Toggle Function
@@ -456,29 +603,38 @@
         localStorage.setItem('theme', 'dark');
         sunIcon.classList.remove('hidden');
         moonIcon.classList.add('hidden');
-        toggleBtn.classList.remove('text-slate-700');
-        toggleBtn.classList.add('text-yellow-400');
       } else {
         localStorage.setItem('theme', 'light');
         sunIcon.classList.add('hidden');
         moonIcon.classList.remove('hidden');
-        toggleBtn.classList.add('text-slate-700');
-        toggleBtn.classList.remove('text-yellow-400');
       }
     });
 
     // Cursor Logic
-    const cursor = document.querySelector('.cursor');
     const spot = document.querySelector('.spotlight');
-
     document.addEventListener('mousemove', e => {
-      // Small optimization: use requestAnimationFrame
-      requestAnimationFrame(() => {
-        cursor.style.left = e.clientX + 'px';
-        cursor.style.top = e.clientY + 'px';
-        spot.style.setProperty('--x', e.clientX + 'px');
-        spot.style.setProperty('--y', e.clientY + 'px');
+      spot.style.setProperty('--x', e.clientX + 'px');
+      spot.style.setProperty('--y', e.clientY + 'px');
+    });
+
+    // Scroll Observer for Fade In
+    const observerOptions = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+          observer.unobserve(entry.target);
+        }
       });
+    }, observerOptions);
+
+    document.querySelectorAll('.reveal').forEach(el => {
+      observer.observe(el);
     });
   </script>
 </body>
