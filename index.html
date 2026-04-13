@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <title>Abhimanyu Bhardwaj | DevOps Engineer</title>
-<link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description"
     content="Portfolio of Abhimanyu Bhardwaj, a DevOps Engineer specializing in Cloud, Kubernetes, and Automation.">
@@ -28,9 +28,9 @@
           },
           colors: {
             dark: {
-              bg: '#09090b', // Zinc 950
-              card: '#18181b', // Zinc 900
-              border: '#27272a', // Zinc 800
+              bg: '#09090b',
+              card: '#18181b',
+              border: '#27272a',
             }
           },
           animation: {
@@ -141,7 +141,6 @@
 
     .dark .glass-card {
       background: rgba(24, 24, 27, 0.5);
-      /* Zinc 900 / 0.5 */
       border: 1px solid rgba(255, 255, 255, 0.05);
       box-shadow: 0 0 0 -1px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.1);
     }
@@ -149,7 +148,6 @@
     .glass-card:hover {
       transform: translateY(-5px);
       border-color: rgba(14, 165, 233, 0.4);
-      /* Sky 500 */
       box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
     }
 
@@ -181,10 +179,8 @@
       will-change: transform;
     }
 
-
     .gradient-text {
       background: linear-gradient(135deg, #0284c7, #10b981);
-      /* Sky 600 to Emerald 500 */
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
@@ -192,7 +188,6 @@
 
     .dark .gradient-text {
       background: linear-gradient(135deg, #38bdf8, #34d399);
-      /* Sky 400 to Emerald 400 */
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
@@ -237,12 +232,12 @@
       <span class="text-sky-600 dark:text-sky-400">Abhimanyu</span>
     </a>
 
-
     <div class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600 dark:text-slate-300">
       <a href="#about" class="hover:text-sky-500 transition-colors">About</a>
-      <a href="#education" class="hover:text-sky-500 transition-colors">Education</a>
+      <a href="#experience" class="hover:text-sky-500 transition-colors">Experience</a>
       <a href="#skills" class="hover:text-sky-500 transition-colors">Skills</a>
-      <a href="#projects" class="hover:text-sky-500 transition-colors">Project</a>
+      <a href="#projects" class="hover:text-sky-500 transition-colors">Projects</a>
+      <a href="#education" class="hover:text-sky-500 transition-colors">Education</a>
     </div>
 
     <!-- Theme Toggle -->
@@ -286,11 +281,12 @@
       </h1>
 
       <p class="text-xl md:text-2xl text-slate-600 dark:text-slate-400 max-w-2xl leading-relaxed mb-10">
-        <span class="font-semibold text-slate-800 dark:text-slate-200">DevOps Engineer</span> crafting scalable cloud
-        infrastructure, automating CI/CD pipelines, and securing varied environments.
+        <span class="font-semibold text-slate-800 dark:text-slate-200">DevOps Engineer</span> specializing in CI/CD,
+        Kubernetes, Terraform, AWS, Azure & DevSecOps. Building scalable cloud infrastructure and automating deployment
+        pipelines.
       </p>
 
-      <div class="flex gap-4 flex-wrap justify-center">
+      <div class="flex gap-4 flex-wrap justify-center mb-8">
         <a href="https://github.com/abhimanyu8829" target="_blank"
           class="magnetic group px-8 py-3.5 rounded-full bg-slate-900 text-white dark:bg-white dark:text-slate-900 font-semibold hover:-translate-y-1 transition-all shadow-lg hover:shadow-xl flex items-center gap-2">
           <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -307,6 +303,25 @@
           </svg>
           LinkedIn
         </a>
+      </div>
+
+      <div class="flex gap-3 text-sm text-slate-600 dark:text-slate-400">
+        <span class="flex items-center gap-1">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+            </path>
+          </svg>
+          abhimanyucentral@gmail.com
+        </span>
+        <span class="flex items-center gap-1">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z">
+            </path>
+          </svg>
+          +91-8829038829
+        </span>
       </div>
 
     </div>
@@ -327,13 +342,360 @@
       <h2 class="text-xs font-bold uppercase tracking-widest text-sky-500 mb-4">About Me</h2>
       <h3 class="text-3xl md:text-4xl font-bold mb-6 text-slate-800 dark:text-white">Professional Summary</h3>
       <p class="text-lg text-slate-600 dark:text-slate-300 leading-relaxed">
-        I am a DevOps Engineer with strong hands-on expertise in <span
-          class="text-slate-900 dark:text-white font-semibold">CI/CD automation</span>, <span
-          class="text-slate-900 dark:text-white font-semibold">container orchestration</span>,
-        cloud infrastructure, security-first DevOps (DevSecOps), and scalable system design.
-        My focus is on building production-grade pipelines, automating testing infrastructure,
-        and deploying fault-tolerant applications on Kubernetes.
+        DevOps Engineer with hands-on experience in designing, automating, and maintaining <span
+          class="text-slate-900 dark:text-white font-semibold">CI/CD pipelines</span>, cloud infrastructure, and
+        Kubernetes-based deployments. Strong practical exposure to <span
+          class="text-slate-900 dark:text-white font-semibold">AWS and Microsoft Azure</span>, Infrastructure as Code
+        (Terraform, Ansible), containerization (Docker), and DevSecOps practices including security scanning and
+        monitoring. Proven ability to improve deployment reliability, automate infrastructure provisioning, and support
+        cloud-native, production-grade systems. Additionally experienced in production system management, real-time
+        issue debugging, and backend service troubleshooting.
       </p>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" class="max-w-6xl mx-auto px-6 py-24 reveal">
+    <div class="flex items-center gap-4 mb-12">
+      <h2 class="text-3xl md:text-5xl font-bold text-slate-800 dark:text-white">Work Experience</h2>
+      <div class="h-px flex-1 bg-gradient-to-r from-slate-200 to-transparent dark:from-slate-800"></div>
+    </div>
+
+    <div class="space-y-8">
+      <!-- Current Role -->
+      <div class="glass-card p-8 md:p-10 rounded-[2rem] border-l-4 border-sky-500">
+        <div class="flex flex-col md:flex-row md:items-start md:justify-between mb-6">
+          <div>
+            <h3 class="text-2xl font-bold text-slate-800 dark:text-white mb-2">Associate DevOps Engineer</h3>
+            <p class="text-sky-600 dark:text-sky-400 font-semibold text-lg">Uffizio India Pvt. Ltd.</p>
+          </div>
+          <span
+            class="mt-2 md:mt-0 px-4 py-2 rounded-full text-sm font-semibold bg-sky-100 text-sky-700 dark:bg-sky-500/20 dark:text-sky-300 border border-sky-200 dark:border-sky-500/20 w-fit">Mar
+            2026 – Present</span>
+        </div>
+
+        <ul class="space-y-3 text-slate-600 dark:text-slate-300">
+          <li class="flex items-start"><span class="mr-3 text-sky-500 font-bold mt-1">▹</span>Manage and maintain
+            cloud-based infrastructure supporting GPS tracking and telematics platforms for real-time vehicle
+            monitoring</li>
+          <li class="flex items-start"><span class="mr-3 text-sky-500 font-bold mt-1">▹</span>Design and maintain CI/CD
+            pipelines for backend services and microservices ensuring faster and reliable deployments</li>
+          <li class="flex items-start"><span class="mr-3 text-sky-500 font-bold mt-1">▹</span>Deploy and manage
+            containerized applications using Docker and Kubernetes to support scalable fleet tracking systems</li>
+          <li class="flex items-start"><span class="mr-3 text-sky-500 font-bold mt-1">▹</span>Implement monitoring and
+            observability solutions using Prometheus and Grafana for system health and infrastructure metrics</li>
+          <li class="flex items-start"><span class="mr-3 text-sky-500 font-bold mt-1">▹</span>Automate infrastructure
+            provisioning and environment configuration using Infrastructure as Code tools</li>
+          <li class="flex items-start"><span class="mr-3 text-sky-500 font-bold mt-1">▹</span>Troubleshoot production
+            issues including WebSocket failures, memory leaks (OOM), and backend service crashes using log analysis</li>
+          <li class="flex items-start"><span class="mr-3 text-sky-500 font-bold mt-1">▹</span>Manage Apache Tomcat
+            servers, Samba file sharing, FTP services, and server configurations for high availability</li>
+        </ul>
+      </div>
+
+      <!-- Previous Role 1 -->
+      <div class="glass-card p-8 md:p-10 rounded-[2rem] border-l-4 border-emerald-500">
+        <div class="flex flex-col md:flex-row md:items-start md:justify-between mb-6">
+          <div>
+            <h3 class="text-2xl font-bold text-slate-800 dark:text-white mb-2">DevOps & QA Intern</h3>
+            <p class="text-emerald-600 dark:text-emerald-400 font-semibold text-lg">GTS Infosoft LLP</p>
+          </div>
+          <span
+            class="mt-2 md:mt-0 px-4 py-2 rounded-full text-sm font-semibold bg-emerald-100 text-emerald-700 dark:bg-emerald-500/20 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-500/20 w-fit">Nov
+            2025 – Mar 2026</span>
+        </div>
+
+        <ul class="space-y-3 text-slate-600 dark:text-slate-300">
+          <li class="flex items-start"><span class="mr-3 text-emerald-500 font-bold mt-1">▹</span>Designed and
+            maintained CI/CD pipelines using Jenkins and GitHub Actions for automated build, test, and deployment
+            workflows</li>
+          <li class="flex items-start"><span class="mr-3 text-emerald-500 font-bold mt-1">▹</span>Provisioned and
+            managed Microsoft Azure cloud infrastructure using Terraform for repeatable deployments</li>
+          <li class="flex items-start"><span class="mr-3 text-emerald-500 font-bold mt-1">▹</span>Deployed and managed
+            containerized applications on Azure Kubernetes Service (AKS) with rolling updates and health monitoring</li>
+          <li class="flex items-start"><span class="mr-3 text-emerald-500 font-bold mt-1">▹</span>Automated server
+            provisioning and configuration using Ansible playbooks for consistent environments</li>
+          <li class="flex items-start"><span class="mr-3 text-emerald-500 font-bold mt-1">▹</span>Implemented monitoring
+            and alerting using Prometheus and Grafana to improve system visibility and reliability</li>
+        </ul>
+      </div>
+
+      <!-- Previous Role 2 -->
+      <div class="glass-card p-8 md:p-10 rounded-[2rem] border-l-4 border-violet-500">
+        <div class="flex flex-col md:flex-row md:items-start md:justify-between mb-6">
+          <div>
+            <h3 class="text-2xl font-bold text-slate-800 dark:text-white mb-2">DevOps Trainee</h3>
+            <p class="text-violet-600 dark:text-violet-400 font-semibold text-lg">DevOpsFarm (On-Site)</p>
+          </div>
+          <span
+            class="mt-2 md:mt-0 px-4 py-2 rounded-full text-sm font-semibold bg-violet-100 text-violet-700 dark:bg-violet-500/20 dark:text-violet-300 border border-violet-200 dark:border-violet-500/20 w-fit">Jul
+            2025 – Sep 2025</span>
+        </div>
+
+        <ul class="space-y-3 text-slate-600 dark:text-slate-300">
+          <li class="flex items-start"><span class="mr-3 text-violet-500 font-bold mt-1">▹</span>Built Jenkins-based
+            CI/CD pipelines to automate build and deployment workflows</li>
+          <li class="flex items-start"><span class="mr-3 text-violet-500 font-bold mt-1">▹</span>Automated build and
+            deployment pipelines for Node.js, Java, and Selenium-based testing frameworks</li>
+          <li class="flex items-start"><span class="mr-3 text-violet-500 font-bold mt-1">▹</span>Implemented Kubernetes
+            (K3s) based rolling update deployments for zero-downtime releases</li>
+          <li class="flex items-start"><span class="mr-3 text-violet-500 font-bold mt-1">▹</span>Integrated SonarQube
+            and Trivy into CI/CD pipelines for code quality checks and container security scanning</li>
+          <li class="flex items-start"><span class="mr-3 text-violet-500 font-bold mt-1">▹</span>Monitored
+            infrastructure metrics and logs using Prometheus and Grafana</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="max-w-6xl mx-auto px-6 py-24 reveal">
+    <div class="flex items-center gap-4 mb-12">
+      <h2 class="text-3xl md:text-5xl font-bold text-slate-800 dark:text-white">Technical Skills</h2>
+      <div class="h-px flex-1 bg-gradient-to-r from-slate-200 to-transparent dark:from-slate-800"></div>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      <!-- Core DevOps -->
+      <div class="glass-card p-8 rounded-2xl group">
+        <div
+          class="w-12 h-12 bg-blue-100 dark:bg-blue-500/10 rounded-xl flex items-center justify-center mb-6 text-blue-600 dark:text-blue-400 group-hover:scale-110 transition-transform">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+          </svg>
+        </div>
+        <h4 class="font-bold text-lg mb-3 text-slate-800 dark:text-white">Core DevOps & Cloud</h4>
+        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+          Linux System Administration, Bash Scripting, Git, GitHub, Jenkins, GitHub Actions, CI/CD Pipelines, GitOps
+        </p>
+      </div>
+
+      <!-- Containers -->
+      <div class="glass-card p-8 rounded-2xl group">
+        <div
+          class="w-12 h-12 bg-sky-100 dark:bg-sky-500/10 rounded-xl flex items-center justify-center mb-6 text-sky-600 dark:text-sky-400 group-hover:scale-110 transition-transform">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10">
+            </path>
+          </svg>
+        </div>
+        <h4 class="font-bold text-lg mb-3 text-slate-800 dark:text-white">Containers & Orchestration</h4>
+        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+          Docker, Docker Compose, Kubernetes, K3s, AKS, Helm, Pod Lifecycle, Services, Ingress, ConfigMaps
+        </p>
+      </div>
+
+      <!-- Cloud -->
+      <div class="glass-card p-8 rounded-2xl group">
+        <div
+          class="w-12 h-12 bg-orange-100 dark:bg-orange-500/10 rounded-xl flex items-center justify-center mb-6 text-orange-600 dark:text-orange-400 group-hover:scale-110 transition-transform">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"></path>
+          </svg>
+        </div>
+        <h4 class="font-bold text-lg mb-3 text-slate-800 dark:text-white">Cloud Platforms</h4>
+        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+          AWS (EC2, IAM, VPC, Load Balancers), Microsoft Azure (AKS, App Service, Virtual Machines)
+        </p>
+      </div>
+
+      <!-- IaC -->
+      <div class="glass-card p-8 rounded-2xl group">
+        <div
+          class="w-12 h-12 bg-purple-100 dark:bg-purple-500/10 rounded-xl flex items-center justify-center mb-6 text-purple-600 dark:text-purple-400 group-hover:scale-110 transition-transform">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z">
+            </path>
+          </svg>
+        </div>
+        <h4 class="font-bold text-lg mb-3 text-slate-800 dark:text-white">Infrastructure as Code</h4>
+        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+          Terraform (Modules, State Management), Ansible (Playbooks), YAML Configuration
+        </p>
+      </div>
+
+      <!-- Monitoring -->
+      <div class="glass-card p-8 rounded-2xl group">
+        <div
+          class="w-12 h-12 bg-emerald-100 dark:bg-emerald-500/10 rounded-xl flex items-center justify-center mb-6 text-emerald-600 dark:text-emerald-400 group-hover:scale-110 transition-transform">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z">
+            </path>
+          </svg>
+        </div>
+        <h4 class="font-bold text-lg mb-3 text-slate-800 dark:text-white">Monitoring & Reliability</h4>
+        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+          Prometheus, Grafana, Loki, Alertmanager, Site Reliability Engineering (SRE Fundamentals)
+        </p>
+      </div>
+
+      <!-- Security -->
+      <div class="glass-card p-8 rounded-2xl group">
+        <div
+          class="w-12 h-12 bg-red-100 dark:bg-red-500/10 rounded-xl flex items-center justify-center mb-6 text-red-600 dark:text-red-400 group-hover:scale-110 transition-transform">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z">
+            </path>
+          </svg>
+        </div>
+        <h4 class="font-bold text-lg mb-3 text-slate-800 dark:text-white">Security & Networking</h4>
+        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+          DevSecOps, SonarQube, Trivy, Nginx, SSL/TLS, Vulnerability Scanning
+        </p>
+      </div>
+
+      <!-- Systems -->
+      <div class="glass-card p-8 rounded-2xl group">
+        <div
+          class="w-12 h-12 bg-pink-100 dark:bg-pink-500/10 rounded-xl flex items-center justify-center mb-6 text-pink-600 dark:text-pink-400 group-hover:scale-110 transition-transform">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01">
+            </path>
+          </svg>
+        </div>
+        <h4 class="font-bold text-lg mb-3 text-slate-800 dark:text-white">Systems & Servers</h4>
+        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+          Apache Tomcat, Samba, FTP, File Systems, Port Management, Firewall Configuration, Log Analysis
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="max-w-6xl mx-auto px-6 py-24 reveal">
+    <div class="flex items-center gap-4 mb-12">
+      <h2 class="text-3xl md:text-5xl font-bold text-slate-800 dark:text-white">Featured Projects</h2>
+      <div class="h-px flex-1 bg-gradient-to-r from-slate-200 to-transparent dark:from-slate-800"></div>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-8">
+
+      <!-- Enterprise CI/CD Platform -->
+      <div
+        class="md:col-span-2 glass-card p-8 md:p-12 rounded-[2.5rem] relative overflow-hidden group border-sky-200/50 dark:border-sky-500/20">
+        <div
+          class="absolute top-0 right-0 bg-sky-500 text-white text-xs font-bold px-4 py-2 rounded-bl-2xl shadow-sm z-10">
+          FEATURED
+        </div>
+        <div
+          class="absolute inset-0 bg-gradient-to-r from-sky-50/50 to-transparent dark:from-sky-900/10 dark:to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+        </div>
+
+        <div class="relative z-10">
+          <h3 class="text-3xl font-bold text-slate-900 dark:text-white mb-4">🚀 Enterprise CI/CD Platform</h3>
+          <p class="text-lg text-slate-700 dark:text-slate-300 mb-8 leading-relaxed max-w-3xl">
+            Designed end-to-end CI/CD pipelines using Jenkins and GitHub Actions, integrating automated testing,
+            security scanning, Docker image versioning, and Kubernetes-based deployments for production-grade
+            applications.
+          </p>
+          <div class="flex flex-wrap gap-2">
+            <span
+              class="px-3 py-1 rounded-full text-xs font-medium bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300">Jenkins</span>
+            <span
+              class="px-3 py-1 rounded-full text-xs font-medium bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300">GitHub
+              Actions</span>
+            <span
+              class="px-3 py-1 rounded-full text-xs font-medium bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300">Docker</span>
+            <span
+              class="px-3 py-1 rounded-full text-xs font-medium bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300">Kubernetes</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cloud-Native Microservices -->
+      <div class="glass-card p-10 rounded-[2rem] hover:border-blue-400/50 transition-colors">
+        <h3 class="text-2xl font-bold text-slate-800 dark:text-white mb-4">☁️ Cloud-Native Microservices on AKS</h3>
+        <p class="text-slate-600 dark:text-slate-400 mb-6 leading-relaxed">
+          Deployed containerized microservices on Azure Kubernetes Service with rolling updates, health probes,
+          auto-scaling, and ingress-based traffic routing.
+        </p>
+        <div class="flex flex-wrap gap-2">
+          <span
+            class="px-2 py-1 rounded text-xs bg-blue-100 text-blue-700 dark:bg-blue-500/20 dark:text-blue-300">Azure</span>
+          <span
+            class="px-2 py-1 rounded text-xs bg-blue-100 text-blue-700 dark:bg-blue-500/20 dark:text-blue-300">AKS</span>
+          <span
+            class="px-2 py-1 rounded text-xs bg-blue-100 text-blue-700 dark:bg-blue-500/20 dark:text-blue-300">Helm</span>
+        </div>
+      </div>
+
+      <!-- Infrastructure as Code -->
+      <div class="glass-card p-10 rounded-[2rem] hover:border-purple-400/50 transition-colors">
+        <h3 class="text-2xl font-bold text-slate-800 dark:text-white mb-4">🏗️ Infrastructure as Code Platform</h3>
+        <p class="text-slate-600 dark:text-slate-400 mb-6 leading-relaxed">
+          Built reusable Terraform modules and Ansible playbooks to provision and configure multi-environment cloud
+          infrastructure across dev, staging, and production.
+        </p>
+        <div class="flex flex-wrap gap-2">
+          <span
+            class="px-2 py-1 rounded text-xs bg-purple-100 text-purple-700 dark:bg-purple-500/20 dark:text-purple-300">Terraform</span>
+          <span
+            class="px-2 py-1 rounded text-xs bg-purple-100 text-purple-700 dark:bg-purple-500/20 dark:text-purple-300">Ansible</span>
+          <span
+            class="px-2 py-1 rounded text-xs bg-purple-100 text-purple-700 dark:bg-purple-500/20 dark:text-purple-300">IaC</span>
+        </div>
+      </div>
+
+      <!-- Monitoring System -->
+      <div class="glass-card p-10 rounded-[2rem] hover:border-emerald-400/50 transition-colors">
+        <h3 class="text-2xl font-bold text-slate-800 dark:text-white mb-4">📊 Centralized Monitoring & Logging</h3>
+        <p class="text-slate-600 dark:text-slate-400 mb-6 leading-relaxed">
+          Implemented a centralized observability stack using Prometheus, Grafana, and Loki for Kubernetes clusters,
+          enabling alerting and performance monitoring.
+        </p>
+        <div class="flex flex-wrap gap-2">
+          <span
+            class="px-2 py-1 rounded text-xs bg-emerald-100 text-emerald-700 dark:bg-emerald-500/20 dark:text-emerald-300">Prometheus</span>
+          <span
+            class="px-2 py-1 rounded text-xs bg-emerald-100 text-emerald-700 dark:bg-emerald-500/20 dark:text-emerald-300">Grafana</span>
+          <span
+            class="px-2 py-1 rounded text-xs bg-emerald-100 text-emerald-700 dark:bg-emerald-500/20 dark:text-emerald-300">Loki</span>
+        </div>
+      </div>
+
+      <!-- Zero-Downtime Deployment -->
+      <div class="glass-card p-10 rounded-[2rem] hover:border-indigo-400/50 transition-colors">
+        <h3 class="text-2xl font-bold text-slate-800 dark:text-white mb-4">🔄 Zero-Downtime Deployment System</h3>
+        <p class="text-slate-600 dark:text-slate-400 mb-6 leading-relaxed">
+          Implemented blue-green and rolling deployment strategies using Kubernetes, Helm, and Nginx ingress to ensure
+          seamless production releases.
+        </p>
+        <div class="flex flex-wrap gap-2">
+          <span
+            class="px-2 py-1 rounded text-xs bg-indigo-100 text-indigo-700 dark:bg-indigo-500/20 dark:text-indigo-300">Kubernetes</span>
+          <span
+            class="px-2 py-1 rounded text-xs bg-indigo-100 text-indigo-700 dark:bg-indigo-500/20 dark:text-indigo-300">Helm</span>
+          <span
+            class="px-2 py-1 rounded text-xs bg-indigo-100 text-indigo-700 dark:bg-indigo-500/20 dark:text-indigo-300">Nginx</span>
+        </div>
+      </div>
+
+      <!-- DevSecOps Pipeline -->
+      <div class="glass-card p-10 rounded-[2rem] hover:border-red-400/50 transition-colors">
+        <h3 class="text-2xl font-bold text-slate-800 dark:text-white mb-4">🔒 DevSecOps Security Pipeline</h3>
+        <p class="text-slate-600 dark:text-slate-400 mb-6 leading-relaxed">
+          Integrated code quality checks with SonarQube and vulnerability scanning with Trivy into CI/CD pipelines.
+          Enforced security gates blocking deployment on failures.
+        </p>
+        <div class="flex flex-wrap gap-2">
+          <span
+            class="px-2 py-1 rounded text-xs bg-red-100 text-red-700 dark:bg-red-500/20 dark:text-red-300">SonarQube</span>
+          <span
+            class="px-2 py-1 rounded text-xs bg-red-100 text-red-700 dark:bg-red-500/20 dark:text-red-300">Trivy</span>
+          <span
+            class="px-2 py-1 rounded text-xs bg-red-100 text-red-700 dark:bg-red-500/20 dark:text-red-300">Security</span>
+        </div>
+      </div>
+
     </div>
   </section>
 
@@ -358,25 +720,20 @@
           <div>
             <h3 class="text-2xl font-bold text-slate-800 dark:text-white mb-1">MCA</h3>
             <p class="text-sky-600 dark:text-sky-400 font-medium">Master of Computer Applications</p>
+            <p class="text-slate-600 dark:text-slate-400 text-sm mt-1">Bikaner Technical University, Rajasthan</p>
           </div>
           <span
-            class="px-3 py-1 rounded-full text-xs font-semibold bg-sky-100 text-sky-700 dark:bg-sky-500/20 dark:text-sky-300 border border-sky-200 dark:border-sky-500/20">Present</span>
+            class="px-3 py-1 rounded-full text-xs font-semibold bg-sky-100 text-sky-700 dark:bg-sky-500/20 dark:text-sky-300 border border-sky-200 dark:border-sky-500/20">2025
+            – Present</span>
         </div>
 
-        <p class="text-slate-500 dark:text-slate-500 text-sm mb-6 flex items-center gap-2">
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
-          </svg>
-          2025 – Present
-        </p>
-
         <ul class="space-y-3 text-slate-600 dark:text-slate-300 text-sm">
-          <li class="flex items-start"><span class="mr-3 text-sky-500 font-bold">▹</span>Advanced Software Engineering &
-            System Design</li>
+          <li class="flex items-start"><span class="mr-3 text-sky-500 font-bold">▹</span>Advanced Software Engineering
+            & System Design</li>
           <li class="flex items-start"><span class="mr-3 text-sky-500 font-bold">▹</span>Cloud Computing & Distributed
             Systems</li>
-          <li class="flex items-start"><span class="mr-3 text-sky-500 font-bold">▹</span>DevOps & Secure Deployment</li>
+          <li class="flex items-start"><span class="mr-3 text-sky-500 font-bold">▹</span>DevOps & Secure Deployment
+            Practices</li>
         </ul>
       </div>
 
@@ -392,18 +749,12 @@
           <div>
             <h3 class="text-2xl font-bold text-slate-800 dark:text-white mb-1">BCA</h3>
             <p class="text-emerald-600 dark:text-emerald-400 font-medium">Bachelor of Computer Applications</p>
+            <p class="text-slate-600 dark:text-slate-400 text-sm mt-1">Lachoo Memorial College, Jodhpur, Rajasthan</p>
           </div>
           <span
-            class="px-3 py-1 rounded-full text-xs font-semibold bg-emerald-100 text-emerald-700 dark:bg-emerald-500/20 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-500/20">Completed</span>
+            class="px-3 py-1 rounded-full text-xs font-semibold bg-emerald-100 text-emerald-700 dark:bg-emerald-500/20 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-500/20">2022
+            – 2025</span>
         </div>
-
-        <p class="text-slate-500 dark:text-slate-500 text-sm mb-6 flex items-center gap-2">
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
-          </svg>
-          2022 – 2025
-        </p>
 
         <ul class="space-y-3 text-slate-600 dark:text-slate-300 text-sm">
           <li class="flex items-start"><span class="mr-3 text-emerald-500 font-bold">▹</span>Operating Systems,
@@ -417,198 +768,7 @@
     </div>
   </section>
 
-
-  <!-- FULL SKILLS -->
-  <section id="skills" class="max-w-6xl mx-auto px-6 py-24 reveal">
-    <div class="flex items-center gap-4 mb-12">
-      <h2 class="text-3xl md:text-5xl font-bold text-slate-800 dark:text-white">Technical Arsenal</h2>
-      <div class="h-px flex-1 bg-gradient-to-r from-slate-200 to-transparent dark:from-slate-800"></div>
-    </div>
-
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-
-      <!-- CI/CD -->
-      <div class="glass-card p-8 rounded-2xl group">
-        <div
-          class="w-12 h-12 bg-blue-100 dark:bg-blue-500/10 rounded-xl flex items-center justify-center mb-6 text-blue-600 dark:text-blue-400 group-hover:scale-110 transition-transform">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15">
-            </path>
-          </svg>
-        </div>
-        <h4 class="font-bold text-lg mb-3 text-slate-800 dark:text-white">CI/CD & Automation</h4>
-        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
-          Jenkins (Declarative & Scripted Pipelines), GitHub Actions, GitLab CI, Build Triggers, Artifact Management.
-        </p>
-      </div>
-
-      <!-- Containers -->
-      <div class="glass-card p-8 rounded-2xl group">
-        <div
-          class="w-12 h-12 bg-sky-100 dark:bg-sky-500/10 rounded-xl flex items-center justify-center mb-6 text-sky-600 dark:text-sky-400 group-hover:scale-110 transition-transform">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10">
-            </path>
-          </svg>
-        </div>
-        <h4 class="font-bold text-lg mb-3 text-slate-800 dark:text-white">Containers & K8s</h4>
-        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
-          Docker, Docker Compose, Kubernetes (K8s, K3s), Pod Lifecycle, Services, Ingress, ConfigMaps, Helm.
-        </p>
-      </div>
-
-      <!-- Cloud -->
-      <div class="glass-card p-8 rounded-2xl group">
-        <div
-          class="w-12 h-12 bg-orange-100 dark:bg-orange-500/10 rounded-xl flex items-center justify-center mb-6 text-orange-600 dark:text-orange-400 group-hover:scale-110 transition-transform">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"></path>
-          </svg>
-        </div>
-        <h4 class="font-bold text-lg mb-3 text-slate-800 dark:text-white">Cloud Infrastructure</h4>
-        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
-          AWS EC2, IAM, S3, VPC, Auto Scaling, Load Balancing, Cloud Security Fundamentals.
-        </p>
-      </div>
-
-      <!-- DevSecOps -->
-      <div class="glass-card p-8 rounded-2xl group">
-        <div
-          class="w-12 h-12 bg-red-100 dark:bg-red-500/10 rounded-xl flex items-center justify-center mb-6 text-red-600 dark:text-red-400 group-hover:scale-110 transition-transform">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z">
-            </path>
-          </svg>
-        </div>
-        <h4 class="font-bold text-lg mb-3 text-slate-800 dark:text-white">DevSecOps</h4>
-        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
-          SonarQube (Quality Gates), Trivy, Secrets Management, mTLS, Zero-Trust Concepts.
-        </p>
-      </div>
-
-      <!-- QA -->
-      <div class="glass-card p-8 rounded-2xl group">
-        <div
-          class="w-12 h-12 bg-pink-100 dark:bg-pink-500/10 rounded-xl flex items-center justify-center mb-6 text-pink-600 dark:text-pink-400 group-hover:scale-110 transition-transform">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4">
-            </path>
-          </svg>
-        </div>
-        <h4 class="font-bold text-lg mb-3 text-slate-800 dark:text-white">Testing & QA</h4>
-        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
-          Selenium Grid, Headless Chrome, Dynamic Test Pods, Automated Regression Workflows.
-        </p>
-      </div>
-
-      <!-- Reliability -->
-      <div class="glass-card p-8 rounded-2xl group">
-        <div
-          class="w-12 h-12 bg-purple-100 dark:bg-purple-500/10 rounded-xl flex items-center justify-center mb-6 text-purple-600 dark:text-purple-400 group-hover:scale-110 transition-transform">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-          </svg>
-        </div>
-        <h4 class="font-bold text-lg mb-3 text-slate-800 dark:text-white">Site Reliability</h4>
-        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
-          Logging, Monitoring, Failure Recovery, High Availability Principles, Scripting (Python, Bash).
-        </p>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- PROJECTS -->
-  <section id="projects" class="max-w-6xl mx-auto px-6 py-24 reveal">
-    <div class="flex items-center gap-4 mb-12">
-      <h2 class="text-3xl md:text-5xl font-bold text-slate-800 dark:text-white">Featured Project</h2>
-      <div class="h-px flex-1 bg-gradient-to-r from-slate-200 to-transparent dark:from-slate-800"></div>
-    </div>
-
-    <div class="grid md:grid-cols-2 gap-8">
-
-      <!-- Featured Project -->
-      <div
-        class="md:col-span-2 glass-card p-8 md:p-12 rounded-[2.5rem] relative overflow-hidden group border-sky-200/50 dark:border-sky-500/20">
-        <div
-          class="absolute top-0 right-0 bg-sky-500 text-white text-xs font-bold px-4 py-2 rounded-bl-2xl shadow-sm z-10">
-          FEATURED
-        </div>
-        <div
-          class="absolute inset-0 bg-gradient-to-r from-sky-50/50 to-transparent dark:from-sky-900/10 dark:to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
-        </div>
-
-        <div class="relative z-10">
-          <h3 class="text-3xl font-bold text-slate-900 dark:text-white mb-4">🚀 End-to-End DevOps Platform</h3>
-          <p class="text-lg text-slate-700 dark:text-slate-300 mb-8 leading-relaxed max-w-3xl">
-            Designed and implemented an enterprise-style DevOps lifecycle covering CI/CD, Kubernetes deployment,
-            automated testing, DevSecOps integration, scalability configuration, and production reliability monitoring.
-          </p>
-          <div class="flex flex-wrap gap-2">
-            <span
-              class="px-3 py-1 rounded-full text-xs font-medium bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300">Full
-              Stack DevOps</span>
-            <span
-              class="px-3 py-1 rounded-full text-xs font-medium bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300">Kubernetes</span>
-            <span
-              class="px-3 py-1 rounded-full text-xs font-medium bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300">Monitoring</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Project 1 -->
-      <div class="glass-card p-10 rounded-[2rem] hover:border-blue-400/50 transition-colors">
-        <h3 class="text-2xl font-bold text-slate-800 dark:text-white mb-4">Blue-Green Deployment</h3>
-        <p class="text-slate-600 dark:text-slate-400 mb-6 leading-relaxed">
-          Implemented zero-downtime deployment strategy using Kubernetes Services,
-          traffic switching, and rollback mechanisms. Ensured high availability during updates.
-        </p>
-        <div class="flex gap-2">
-          <span
-            class="px-2 py-1 rounded text-xs bg-blue-100 text-blue-700 dark:bg-blue-500/20 dark:text-blue-300">K8s</span>
-          <span
-            class="px-2 py-1 rounded text-xs bg-blue-100 text-blue-700 dark:bg-blue-500/20 dark:text-blue-300">Docker</span>
-        </div>
-      </div>
-
-      <!-- Project 2 -->
-      <div class="glass-card p-10 rounded-[2rem] hover:border-emerald-400/50 transition-colors">
-        <h3 class="text-2xl font-bold text-slate-800 dark:text-white mb-4">Dynamic Selenium Grid</h3>
-        <p class="text-slate-600 dark:text-slate-400 mb-6 leading-relaxed">
-          Designed ephemeral Selenium Chrome pods triggered during CI pipelines
-          to reduce infrastructure cost and execution time by 40%.
-        </p>
-        <div class="flex gap-2">
-          <span
-            class="px-2 py-1 rounded text-xs bg-emerald-100 text-emerald-700 dark:bg-emerald-500/20 dark:text-emerald-300">Selenium</span>
-          <span
-            class="px-2 py-1 rounded text-xs bg-emerald-100 text-emerald-700 dark:bg-emerald-500/20 dark:text-emerald-300">Optimization</span>
-        </div>
-      </div>
-
-      <!-- Project 3 -->
-      <div class="glass-card p-10 rounded-[2rem] hover:border-purple-400/50 transition-colors">
-        <h3 class="text-2xl font-bold text-slate-800 dark:text-white mb-4">DevSecOps Pipeline</h3>
-        <p class="text-slate-600 dark:text-slate-400 mb-6 leading-relaxed">
-          Integrated code quality checks with SonarQube and vulnerability scanning with Trivy.
-          Enforced security gates that block deployment on failure.
-        </p>
-        <div class="flex gap-2">
-          <span
-            class="px-2 py-1 rounded text-xs bg-purple-100 text-purple-700 dark:bg-purple-500/20 dark:text-purple-300">Security</span>
-          <span
-            class="px-2 py-1 rounded text-xs bg-purple-100 text-purple-700 dark:bg-purple-500/20 dark:text-purple-300">Automation</span>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
+  <!-- FOOTER -->
   <footer
     class="py-12 text-center text-slate-500 dark:text-slate-500 text-sm glass border-t border-slate-200 dark:border-slate-800 bg-white/50 dark:bg-black/20">
     <div class="mb-4 flex justify-center gap-6">
@@ -616,8 +776,10 @@
         class="hover:text-slate-900 dark:hover:text-white transition-colors">GitHub</a>
       <a href="https://linkedin.com/in/abhimanyu-bhardwaj-a26640242"
         class="hover:text-slate-900 dark:hover:text-white transition-colors">LinkedIn</a>
+      <a href="mailto:abhimanyucentral@gmail.com"
+        class="hover:text-slate-900 dark:hover:text-white transition-colors">Email</a>
     </div>
-    <p>© 2026 Abhimanyu Bhardwaj</p>
+    <p>© 2026 Abhimanyu Bhardwaj • DevOps Engineer</p>
   </footer>
 
   <script>
@@ -627,11 +789,9 @@
     const sunIcon = document.getElementById('sun-icon');
     const moonIcon = document.getElementById('moon-icon');
 
-    // Check Local Storage or System Preference
     const userTheme = localStorage.getItem('theme');
     const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
-    // Initial Theme Setup
     if (userTheme === 'dark' || (!userTheme && systemTheme)) {
       html.classList.add('dark');
       sunIcon.classList.remove('hidden');
@@ -642,7 +802,6 @@
       moonIcon.classList.remove('hidden');
     }
 
-    // Toggle Function
     toggleBtn.addEventListener('click', () => {
       html.classList.toggle('dark');
 
@@ -657,7 +816,7 @@
       }
     });
 
-    // Cursor Logic
+    // Cursor & Mesh Background
     const spot = document.querySelector('.spotlight');
     const meshBg = document.querySelector('.mesh-bg');
     document.addEventListener('mousemove', e => {
@@ -670,7 +829,7 @@
       meshBg?.style.setProperty('--bg-ry', `${xRatio * 5}deg`);
     });
 
-    // 3D Card Tilt Interaction
+    // 3D Card Tilt
     const tiltCards = document.querySelectorAll('.glass-card');
 
     tiltCards.forEach(card => {
@@ -708,7 +867,7 @@
       });
     });
 
-    // Scroll Observer for Fade In
+    // Scroll Observer
     const observerOptions = {
       root: null,
       rootMargin: '0px',
